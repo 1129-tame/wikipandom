@@ -7,7 +7,7 @@ const App: VFC = () => (
     <header className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
       <p>
-        Edit
+        Edited
         {' '}
         <code>src/App.tsx</code>
         {' '}
