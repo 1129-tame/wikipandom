@@ -1,9 +1,15 @@
 import { VFC, useEffect, useState } from 'react';
-import { Grid, TextField, Button } from '@material-ui/core';
+import {
+  Grid, TextField, Button, Container,
+} from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import axios from 'axios';
 import { WatchFileKind } from 'typescript';
+
+import { ArticleModel } from '../model/article-model';
+
+import WikiCard from './WikiCard';
 
 // contentmodel: "wikitext"
 // lastrevid: 68998672
@@ -34,18 +40,6 @@ interface responce {
       }
     }
   }
-}
-
-interface ArticleModel {
-  contentmodel: string;
-  lastrevid: number;
-  length: number;
-  ns: number;
-  pageid: number;
-  pagelanguage: string;
-  pagelanguagehtmlcode: string;
-  title: string;
-  touched: string;
 }
 
 interface wiki<T> {
@@ -127,24 +121,32 @@ const Form: VFC = () => {
           <TextField id="standard-basic" label="name" fullWidth />
         </form>
       </Grid>
-      <Grid>
-        <Button
-          onClick={() => { submitButton(); }}
-          variant="contained"
-          color="primary"
-          size="large"
-        >
-          Push!
-        </Button>
-        <Typography component="div">
+      <Grid
+        item
+        xs={12}
+      >
+        <Box textAlign="center">
+          <Button
+            onClick={() => { submitButton(); }}
+            variant="contained"
+            color="primary"
+            size="large"
+          >
+            Push!
+          </Button>
+        </Box>
+        {/* <Typography component="div">
           {articles.map((article, index) => (
             // eslint-disable-next-line react/no-array-index-key
             <Box fontSize={20} m={1} fontStyle="oblique" key={index}>
               {article.title}
             </Box>
           ))}
-        </Typography>
+        </Typography> */}
       </Grid>
+      <WikiCard
+        articles={articles}
+      />
     </Grid>
   );
 };
