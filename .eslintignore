@@ -1,5 +1,6 @@
 build/
 public/
+# src/components/Form.tsx
 **/coverage/
 **/node_modules/
 **/*.min.js
