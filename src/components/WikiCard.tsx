@@ -23,16 +23,18 @@ const WikiCard = (
       {articles.map((article, index) => (
         <Grid item xs={6} key={article.pageid}>
           <Card>
-            <CardContent>
-              <Typography color="textSecondary">
-                {article.title}
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <WikiDialog
-                article={article}
-              />
-            </CardActions>
+            <Box borderColor="secondary.main" p={2}>
+              <CardContent>
+                <Typography color="textSecondary">
+                  {article.title}
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <WikiDialog
+                  article={article}
+                />
+              </CardActions>
+            </Box>
           </Card>
         </Grid>
       ))}
