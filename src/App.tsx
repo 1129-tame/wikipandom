@@ -8,7 +8,7 @@ import Box from '@material-ui/core/Box';
 import Form from './components/Form';
 // import logo from './logo.svg';
 import './App.css';
-import pic from './images/logo.png';
+import pic from './images/logo2.png';
 
 const theme = createTheme({
   palette: {
