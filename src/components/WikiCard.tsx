@@ -21,7 +21,7 @@ const WikiCard = (
   return (
     <>
       {articles.map((article, index) => (
-        <Grid item xs={6} key={article.pageid}>
+        <Grid item xs={6} sm={3} key={article.pageid}>
           <Card>
             <Box borderColor="secondary.main" p={2}>
               <CardContent>

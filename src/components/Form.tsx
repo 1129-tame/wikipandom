@@ -87,7 +87,7 @@ const Form: VFC = () => {
   //     });
   // }, []);
   const submitButton = () => {
-    axios.get('https://ja.wikipedia.org/w/api.php?action=query&generator=random&grnnamespace=0&grnlimit=2&prop=info&format=json&origin=*')
+    axios.get('https://ja.wikipedia.org/w/api.php?action=query&generator=random&grnnamespace=0&grnlimit=4&prop=info&format=json&origin=*')
       .then((res) => {
         // TODO: map でしゅとくする
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment

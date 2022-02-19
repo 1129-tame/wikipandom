@@ -8,6 +8,7 @@ import Box from '@material-ui/core/Box';
 import Form from './components/Form';
 // import logo from './logo.svg';
 import './App.css';
+import pic from './images/logo.png';
 
 const theme = createTheme({
   palette: {
@@ -22,16 +23,17 @@ const theme = createTheme({
 
 const App: VFC = () => (
   <ThemeProvider theme={theme}>
-    <Container maxWidth="sm">
+    <Container maxWidth="md">
       <Grid
         container
         justifyContent="center"
         alignItems="center"
       >
         <Typography component="div">
-          <Box fontSize={100} m={1} fontStyle="oblique">
+          <img src={pic} alt="pictur" />
+          {/* <Box fontSize={80} m={1} fontStyle="oblique">
             Wikipandom
-          </Box>
+          </Box> */}
         </Typography>
         <Form />
       </Grid>
