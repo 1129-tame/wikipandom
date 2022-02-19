@@ -92,10 +92,7 @@ const Form: VFC = () => {
         // TODO: map でしゅとくする
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         const { data }: responce = res;
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-        console.log(data.query.pages);
-        // eslint-disable-next-line no-restricted-syntax
-        // data.query.pages.map((wikiinfo, index) => console.log(wikiinfo));
+
         // eslint-disable-next-line no-restricted-syntax
         for (const id in data.query.pages) {
           if (true) {
@@ -135,14 +132,6 @@ const Form: VFC = () => {
             Push!
           </Button>
         </Box>
-        {/* <Typography component="div">
-          {articles.map((article, index) => (
-            // eslint-disable-next-line react/no-array-index-key
-            <Box fontSize={20} m={1} fontStyle="oblique" key={index}>
-              {article.title}
-            </Box>
-          ))}
-        </Typography> */}
       </Grid>
       <WikiCard
         articles={articles}

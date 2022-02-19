@@ -14,7 +14,7 @@ const App: VFC = () => (
       alignItems="center"
     >
       <Typography component="div">
-        <Box fontSize={150} m={1} fontStyle="oblique">
+        <Box fontSize={100} m={1} fontStyle="oblique">
           Wikipandom
         </Box>
       </Typography>

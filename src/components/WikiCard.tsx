@@ -1,4 +1,4 @@
-import { VFC } from 'react';
+import { useState } from 'react';
 import {
   Grid, Card, CardContent, Button, CardActions,
 } from '@material-ui/core';
@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
 import { ArticleModel } from '../model/article-model';
+import WikiDialog from './WikiDialog';
 
 // 受け取る props の型を定義
 interface WikiCardProps {
@@ -19,24 +20,18 @@ const WikiCard = (
 
   return (
     <>
-      {/* <Typography component="div">
-        {articles.map((article, index) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <Box fontSize={20} m={1} fontStyle="oblique" key={index}>
-            {article.title}
-          </Box>
-        ))}
-      </Typography> */}
       {articles.map((article, index) => (
-        <Grid item xs={6}>
+        <Grid item xs={6} key={article.pageid}>
           <Card>
             <CardContent>
-              <Typography color="textSecondary" key={article.pageid}>
+              <Typography color="textSecondary">
                 {article.title}
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small">記事を読む</Button>
+              <WikiDialog
+                article={article}
+              />
             </CardActions>
           </Card>
         </Grid>
